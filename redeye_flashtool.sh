@@ -2,7 +2,7 @@
 
 # ==================================================
 #    RedEyE  UNIVERSAL SMART FLASHER & EXTRACTOR
-#    Version: 4.0 (Full Auto Pro)
+#    Version: 4.1 (Termux Safe Edition)
 #    Developer:  Himel Majumdar Pronob
 # ==================================================
 
@@ -47,7 +47,8 @@ extract_ofp() {
         echo -e "${CYAN}[*] Downloading Decryption Engine...${NC}"
         curl -L -s -o ofp_decrypt.py "https://raw.githubusercontent.com/bkerler/oppo_tools/master/ofp_mtk_decrypt.py"
     fi
-    read -p "${YELLOW}[?] Enter FULL PATH of your .ofp file: ${NC}" OFP_FILE
+    echo -en "${YELLOW}[?] Enter FULL PATH of your .ofp file: ${NC}"
+    read OFP_FILE
     if [ ! -f "$OFP_FILE" ]; then
         echo -e "${RED}[❌] Error: OFP file not found!${NC}"
         read -p "Press Enter to return..."
@@ -62,7 +63,8 @@ extract_ofp() {
 
 # ================= Auto Flash =================
 auto_flash() {
-    read -p "${YELLOW}[?] Enter folder path containing images (or extracted OFP folder): ${NC}" IMG_PATH
+    echo -en "${YELLOW}[?] Enter folder path containing images (or extracted OFP folder): ${NC}"
+    read IMG_PATH
     if [ ! -d "$IMG_PATH" ]; then
         echo -e "${RED}[❌] Error: Directory not found!${NC}"
         read -p "Press Enter to return..."
@@ -81,7 +83,6 @@ auto_flash() {
         sleep 1
     done
 
-    # Auto-detect image/bin files
     shopt -s nullglob
     FILES=( "$IMG_PATH"/*.img "$IMG_PATH"/*.bin )
     if [ ${#FILES[@]} -eq 0 ]; then
@@ -98,7 +99,8 @@ auto_flash() {
         echo "  - $PART_NAME  --> $(basename "$f")"
     done
 
-    read -p "${YELLOW}[?] Start Auto Flashing ALL partitions? (y/n): ${NC}" choice
+    echo -en "${YELLOW}[?] Start Auto Flashing ALL partitions? (y/n): ${NC}"
+    read choice
     if [[ ! "$choice" =~ ^[Yy]$ ]]; then
         echo -e "${RED}[!] Flashing cancelled.${NC}"
         return
@@ -119,7 +121,8 @@ auto_flash() {
     echo -e "\n${CYAN}[*] Flashing completed. Choose next action:${NC}"
     echo -e "${YELLOW}[1] Reboot Device${NC}"
     echo -e "${YELLOW}[2] Back to Main Menu${NC}"
-    read -p "${CYAN}[?] Select Option: ${NC}" post_choice
+    echo -en "${CYAN}[?] Select Option: ${NC}"
+    read post_choice
     case $post_choice in
         1) echo -e "${CYAN}[*] Rebooting device...${NC}"; fastboot reboot ;;
         2) return ;;
@@ -142,7 +145,8 @@ while true; do
     echo -e "${YELLOW}[2] Extract .ofp Firmware (Oppo/Realme/OnePlus)${NC}"
     echo -e "${YELLOW}[3] Check Fastboot Devices${NC}"
     echo -e "${YELLOW}[4] Exit${NC}"
-    read -p "${CYAN}[?] Select Option: ${NC}" main_choice
+    echo -en "${CYAN}[?] Select Option: ${NC}"
+    read main_choice
 
     check_dependencies
 
