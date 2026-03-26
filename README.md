@@ -25,7 +25,7 @@ Unlocked Bootloader: Your device must have an unlocked bootloader to flash image
 OFP Extraction: The extraction process saves files to your phone's internal memory. Ensure you have enough storage space (at least 15-20GB for full firmware).
 Safety: Always double-check your file names before starting the auto-flash process.
 👨‍💻 Developer
-Fazle Rabbi from Bangladesh 
+  Himel Majumdar Pronob from Bangladesh 
 ## 🛠️ How to Use in Termux
 
 1. **Clone the Repository:**
