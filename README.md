@@ -31,8 +31,8 @@ Fazle Rabbi from Bangladesh
 1. **Clone the Repository:**
    ```bash
    git clone [https://github.com/Redeye00007/redeye_flashtool](https://github.com/Redeye00007/redeye_flashtool)
-   cd rabbi-smart-tool
-   chmod +x rabbi_tool.sh
+   cd redeye_flashtool
+   chmod +x redeye_flashtool
    ./rabbi_tool.sh
 
    
