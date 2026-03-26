@@ -1,4 +1,4 @@
-# 🚀 RABBI UNIVERSAL SMART FLASHER & EXTRACTOR (V2.1)
+# 🚀 RedEyE's UNIVERSAL SMART FLASHER & EXTRACTOR (V2.1)
 
 A professional, lightweight, and dynamic Android flashing tool designed specifically for **Linux** and **Termux** users. This tool simplifies the process of flashing stock firmware and extracting encrypted OFP files.
 
@@ -30,9 +30,9 @@ Fazle Rabbi from Bangladesh
 
 1. **Clone the Repository:**
    ```bash
-   git clone [https://github.com/Redeye00007/redeye_flashtool](https://github.com/Redeye00007/redeye_flashtool)
+   git clone https://github.com/Redeye00007/redeye_flashtool
    cd redeye_flashtool
    chmod +x redeye_flashtool
-   ./rabbi_tool.sh
+   ./redeye_flashtool
 
    
