@@ -1,7 +1,7 @@
 # 🚀 RedEyE's UNIVERSAL SMART FLASHER & EXTRACTOR (V2.1)
 
 A professional, lightweight, and dynamic Android flashing tool designed specifically for **Linux** and **Termux** users. This tool simplifies the process of flashing stock firmware and extracting encrypted OFP files.
-
+## oppo, realme, oneplus
 ## ✨ Features
 * **Auto-Detect Flashing:** Automatically scans and flashes all `.img` and `.bin` files from a folder based on their filenames.
 * **OFP Extractor:** Decrypts and extracts Oppo/Realme/OnePlus `.ofp` firmware files into flashable images.
